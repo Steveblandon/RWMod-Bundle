@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Insectoids</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!-- Metallic Chitin -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "VFEI_Chitin"]/label</xpath>
+					<value><label>metallic chitin</label></value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "VFEI_Chitin"]/description</xpath>
+					<value><description>An extremely thick composition of rare minerals and biomass closely resembling that of steel, commonly found in a form of bio-engineered insect exoskeleton.</description></value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "VFEI_Chitin"]/statBases</xpath>
+					<value>
+					<statBases>
+						<MarketValue>4</MarketValue>
+						<Mass>0.45</Mass>
+						<Flammability>0.0</Flammability>
+						<StuffPower_Armor_Sharp>1.06</StuffPower_Armor_Sharp>
+						<StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
+						<StuffPower_Armor_Heat>0.5</StuffPower_Armor_Heat>
+						<StuffPower_Insulation_Cold>4</StuffPower_Insulation_Cold>
+						<StuffPower_Insulation_Heat>2</StuffPower_Insulation_Heat>
+						<SharpDamageMultiplier>0.7</SharpDamageMultiplier>
+      					<BluntDamageMultiplier>0.7</BluntDamageMultiplier>
+					</statBases>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "VFEI_Chitin"]/stuffProps/statFactors/MaxHitPoints</xpath>
+					<value>
+						<MaxHitPoints>1</MaxHitPoints>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "VFEI_Chitin"]/stuffProps/commonality</xpath>
+					<value>
+						<commonality>0.2</commonality>
+					</value>
+				</li>
+
+				<!-- Drops -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_Insectoid_Queen"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VFEI_Insectoid_Queen"]/race</xpath>
+					<value><leatherDef>Leather_RaptorPlates</leatherDef></value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_Insectoid_RoyalMegaspider"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VFEI_Insectoid_RoyalMegaspider"]/race</xpath>
+					<value><leatherDef>Leather_RaptorPlates</leatherDef></value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_Insectoid_Gigalocust"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VFEI_Insectoid_Gigalocust"]/race</xpath>
+					<value><leatherDef>Leather_RaptorPlates</leatherDef></value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_Insectoid_Megapede"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VFEI_Insectoid_Megapede"]/race</xpath>
+					<value><leatherDef>Leather_RaptorPlates</leatherDef></value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatgrownBoomtick"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownGigascorpion"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownGigascorpion"]/race</xpath>
+					<value><leatherDef>Leather_RaptorPlates</leatherDef></value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownGigawig"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownGigawig"]/race</xpath>
+					<value><leatherDef>Leather_RaptorPlates</leatherDef></value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownMegacricket"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownMilkbeetle"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownMilkbeetle"]/comps/li[@Class="CompProperties_Shearable"]</xpath>
+					<value>
+						<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
+							<resourceDef>Leather_Chitin</resourceDef>
+							<gatheringIntervalDays>3</gatheringIntervalDays>
+							<resourceAmount>30</resourceAmount>
+							<customResourceString>CT_ChitinDesc</customResourceString>
+						</li>
+					</value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownMonstrosity"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownMonstrosity"]/race</xpath>
+					<value><leatherDef>Leather_RaptorPlates</leatherDef></value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownPrincess"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownPrincess"]/race</xpath>
+					<value><leatherDef>Leather_RaptorPlates</leatherDef></value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownRoyalMaggot"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownSpiderweaver"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownSpiderweaver"]/race</xpath>
+					<value><leatherDef>Leather_RaptorPlates</leatherDef></value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownTitanbeetle"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownTitanbeetle"]/race</xpath>
+					<value><leatherDef>Leather_RaptorPlates</leatherDef></value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownGigalocust"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownGigalocust"]/race</xpath>
+					<value><leatherDef>Leather_RaptorPlates</leatherDef></value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownMegapede"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownMegapede"]/race</xpath>
+					<value><leatherDef>Leather_RaptorPlates</leatherDef></value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownMegascarab"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownMegascarab"]/race</xpath>
+					<value><leatherDef>Leather_RaptorPlates</leatherDef></value>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatgrownMegaspider"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownSpelopede"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownWargling"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VFEI_VatGrownWorkerAnt"]/butcherProducts/VFEI_Chitin</xpath>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+

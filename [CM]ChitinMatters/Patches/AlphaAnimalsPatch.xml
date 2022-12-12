@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!-- Chitin -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "Leather_Chitin"]/label</xpath>
+					<value><label>chitin</label></value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "Leather_Chitin"]/description</xpath>
+					<value><description>Not actually pure chitin, but a bio-engineered composite based on chitin. This composite manages to remain pliable, while still being rather tough and resistant. Provides exceptional protection against sharp objects, decent against blunt attacks, but terrible against the weather.</description></value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "Leather_Chitin"]/statBases</xpath>
+					<value>
+					<statBases>
+						<MarketValue>3</MarketValue>
+						<Mass>0.12</Mass>
+						<Flammability>0.2</Flammability>
+						<StuffPower_Armor_Sharp>1.32</StuffPower_Armor_Sharp>
+						<StuffPower_Armor_Blunt>0.3</StuffPower_Armor_Blunt>
+						<StuffPower_Armor_Heat>1.1</StuffPower_Armor_Heat>
+						<StuffPower_Insulation_Cold>6</StuffPower_Insulation_Cold>
+						<StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
+					</statBases>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "Leather_Chitin"]/graphicData/color</xpath>
+					<value>
+						<color>(150, 135, 114)</color>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "Leather_Chitin"]/stuffProps/color</xpath>
+					<value>
+						<color>(150, 135, 114)</color>
+					</value>
+				</li>
+
+				<!-- Hardened Chitin -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "Leather_RaptorPlates"]/description</xpath>
+					<value><description>A hardened bio-engineered composite based on chitin. This composite manages to remain somewhat pliable, while still being very tough and resistant. Provides exceptional protection against sharp objects, decent against blunt attacks, but terrible against the weather.</description></value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "Leather_RaptorPlates"]/statBases</xpath>
+					<value>
+					<statBases>
+						<MarketValue>4.4</MarketValue>
+						<Mass>0.24</Mass>
+						<Flammability>0.1</Flammability>
+						<StuffPower_Armor_Sharp>1.45</StuffPower_Armor_Sharp>
+						<StuffPower_Armor_Blunt>0.4</StuffPower_Armor_Blunt>
+						<StuffPower_Armor_Heat>1.1</StuffPower_Armor_Heat>
+						<StuffPower_Insulation_Cold>4</StuffPower_Insulation_Cold>
+						<StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
+					</statBases>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "Leather_RaptorPlates"]/graphicData/color</xpath>
+					<value>
+						<color>(129, 97, 78)</color>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "Leather_RaptorPlates"]/stuffProps/color</xpath>
+					<value>
+						<!--<color>(114, 101, 84)</color>-->
+						<!--<color>(117, 98, 81)</color>-->
+						<color>(129, 97, 78)</color>
+					</value>
+				</li>
+
+				<!-- Black Chitin -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "Leather_BlackChitin"]/description</xpath>
+					<value><description>A mildly hardened bio-engineered dark composite based on chitin. This composite manages to remain pliable, while still being exceptionally tough and resistant. Provides excellent protection against sharp objects, decent against blunt attacks, but terrible against the weather. Black Hive engineers have however managed to create a chitin composite that is stronger than anything else previously seen on the rim. It doesn't get any better than this.</description></value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "Leather_BlackChitin"]/label</xpath>
+					<value><label>black chitin</label></value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "Leather_BlackChitin"]/statBases</xpath>
+					<value>
+					<statBases>
+						<MarketValue>5.7</MarketValue>
+						<Mass>0.18</Mass>
+						<Flammability>0.2</Flammability>
+						<StuffPower_Armor_Sharp>1.75</StuffPower_Armor_Sharp>
+						<StuffPower_Armor_Blunt>0.5</StuffPower_Armor_Blunt>
+						<StuffPower_Armor_Heat>1.1</StuffPower_Armor_Heat>
+						<StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+						<StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+					</statBases>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "Leather_BlackChitin"]/graphicData/color</xpath>
+					<value>
+						<color>(52,46,48)</color>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "Leather_BlackChitin"]/stuffProps/color</xpath>
+					<value>
+						<color>(52,46,48)</color>
+					</value>
+				</li>
+
+				<!-- Iron Chitin removal -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="Leather_IronChitin"]</xpath>
+				</li>
+
+				<!-- Drops -->
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[@Name="BaseInsect2"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_AngelMothLarva"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_LarvalAtispec"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_DrainerLarva"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_BedBug"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_AngelMoth"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_Atispec"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_Bumbledrone"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_BumbledroneHierophant"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_BumbledroneQueen"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_CrepuscularBeetle"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_Drainer"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_FireWasp"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_FrostboundBehemoth"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_Frostmite"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_GreatDevourer"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_IronhuskBeetle"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_LuciferBug"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_MammothWorm"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[defName="AA_MegaLouse"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>BaseInsect</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AA_IronhuskBeetle"]/race/leatherDef</xpath>
+					<value>
+						<leatherDef>VFEI_Chitin</leatherDef>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AA_IronhuskBeetle"]/comps/li[@Class="AnimalBehaviours.CompProperties_AnimalProduct"]</xpath>
+					<value>
+						<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
+							<resourceDef>VFEI_Chitin</resourceDef>
+							<gatheringIntervalDays>3</gatheringIntervalDays>
+							<resourceAmount>50</resourceAmount>
+							<customResourceString>CT_ChitinDesc</customResourceString>
+						</li>
+					</value>
+				</li>
+
+				<!-- Make some creatures more common -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AA_RaptorShrimp"]/race/wildBiomes/TemperateSwamp</xpath>
+					<value>
+						<TemperateSwamp>0.2</TemperateSwamp>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="AA_BloodShrimp"]/race/wildBiomes/TemperateSwamp</xpath>
+					<value>
+						<TemperateSwamp>0.1</TemperateSwamp>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+

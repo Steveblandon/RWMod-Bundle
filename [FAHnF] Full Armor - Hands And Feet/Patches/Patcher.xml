@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[
+            contains(@Name,"Armor")
+            or contains(@ParentName,"Armor")
+            or contains(defName,"Armor")
+            or contains(translate(label,'a','A'),'Armor')
+            or contains(translate(description,'a','A'),'Armor')
+            ]/apparel/bodyPartGroups/li[.="Arms"]</xpath>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[
+                contains(@Name,"Armor")
+                or contains(@ParentName,"Armor")
+                or contains(defName,"Armor")
+                or contains(translate(label,'a','A'),'Armor')
+                or contains(translate(description,'a','A'),'Armor')
+                ]/apparel/bodyPartGroups/li[.="Arms"]</xpath>
+            <value>
+                <li>Arms</li>
+                <li>Hands</li>
+            </value>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[
+            contains(@Name,"Armor")
+            or contains(@ParentName,"Armor")
+            or contains(defName,"Armor")
+            or contains(translate(label,'a','A'),'Armor')
+            or contains(translate(description,'a','A'),'Armor')
+            ]/apparel/bodyPartGroups/li[.="Legs"]</xpath>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[
+                contains(@Name,"Armor")
+                or contains(@ParentName,"Armor")
+                or contains(defName,"Armor")
+                or contains(translate(label,'a','A'),'Armor')
+                or contains(translate(description,'a','A'),'Armor')
+                ]/apparel/bodyPartGroups/li[.="Legs"]</xpath>
+            <value>
+                <li>Legs</li>
+                <li>Feet</li>
+            </value>
+        </match>
+    </Operation>
+
+</Patch>
+
